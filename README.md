@@ -1,0 +1,1 @@
+this is the readme for the simple shell project. will update in time
