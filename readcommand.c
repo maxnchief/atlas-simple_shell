@@ -29,4 +29,5 @@ readCommand - Function to take users input
    /*the code above accounts for input errors, and allocates in event of failure*/
     free(buff);
     return (size);
+   }
  }
