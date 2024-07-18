@@ -1,5 +1,6 @@
 #include "shell.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
 readCommand - Function to take users input
  
