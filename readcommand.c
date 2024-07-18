@@ -12,7 +12,7 @@ readCommand - Function to take users input
     char *buff = NULL;
     int size;
 
-    size = grtline(&buff, &n, stdin);
+    size = getline(&buff, &n, stdin);
 
     return (size);
  }
