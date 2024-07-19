@@ -9,5 +9,6 @@
 #include <sys/wait.h>
 
 int readCommand(void)
+char *removeNC(char *str, int len)
 
 #endif
