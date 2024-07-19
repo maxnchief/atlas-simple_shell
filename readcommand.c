@@ -28,7 +28,12 @@ int readCommand(void)
       }
    /*the code above accounts for input errors, and allocates in event of failure*/
    }
-    free(buff);
+
+   command = removeNC(buff, size);
+   printf("%s",command);
+   /**above stores a new command without a newline */
+
+   free(buff);
     return (size);
    
 }
