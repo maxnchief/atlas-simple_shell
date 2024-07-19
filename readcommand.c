@@ -10,7 +10,7 @@ readCommand - Function to take users input
 int readCommand(void)
 {
    size_t n = 0;
-   char *buff = NULL;
+   char *buff = NULL, *command;
    int size;
 
    size = getline(&buff, &n, stdin);
@@ -27,7 +27,8 @@ int readCommand(void)
       free(buff);
       }
    /*the code above accounts for input errors, and allocates in event of failure*/
+   }
     free(buff);
     return (size);
-   }
+   
 }
