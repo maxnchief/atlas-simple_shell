@@ -3,10 +3,10 @@
 .SH NAME
  Simple Shell
 
-SYNOPSIS
+.SH SYNOPSIS
 Command | ./hsh
 
-DESCRIPTION
+.SH DESCRIPTION
 Simple Shell is a UNIX command line interperter that prints a prompt, and  only runs single-worded commands that dont involve special characters. The shell will reprint the prompt along with an error, if no command is found. 
 
 OPTIONS
