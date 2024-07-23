@@ -12,7 +12,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
+int main(void)
 int readCommand(void)
 char *removeNC(char *str, int len)
 
