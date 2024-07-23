@@ -9,7 +9,7 @@ Command | ./hsh
 .SH DESCRIPTION
 Simple Shell is a UNIX command line interperter that prints a prompt, and  only runs single-worded commands that dont involve special characters. The shell will reprint the prompt along with an error, if no command is found. 
 
-.S OPTIONS
+.SH OPTIONS
 ./hsh is the file that is used to run the Shell.
 ls - List all files in current directory.
 
