@@ -10,7 +10,7 @@ readCommand - Function to take users input
 int readCommand(void)
 {
    size_t n = 0;
-   char *buff = NULL, *command;
+   char *buff = NULL, *command; *argsC[MAX_ARG];
    int size;
 
    size = getline(&buff, &n, stdin);
@@ -23,13 +23,14 @@ int readCommand(void)
       }
       else
       {
-      perror("Failed to read user input");
-      free(buff);
+         perror("Failed to read user input");
+         free(buff);
       }
    /*the code above accounts for input errors, and allocates in event of failure*/
    }
 
    command = removeNC(buff, size);
+   tokenize(command, argsC);
    printf("%s",command);
    /**above stores a new command without a newline */
 

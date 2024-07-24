@@ -12,6 +12,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+#define MAX_ARG 125
+
 int main(void)
 int readCommand(void)
 char *removeNC(char *str, int len)
