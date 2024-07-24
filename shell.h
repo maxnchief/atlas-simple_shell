@@ -17,5 +17,6 @@
 int main(void)
 int readCommand(void)
 char *removeNC(char *str, int len)
+int tokenize(char *command, char *argsC[])
 
 #endif

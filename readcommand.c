@@ -1,6 +1,7 @@
 #include "shell.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 /**
 readCommand - Function to take users input
  
@@ -10,7 +11,7 @@ readCommand - Function to take users input
 int readCommand(void)
 {
    size_t n = 0;
-   char *buff = NULL, *command; *argsC[MAX_ARG];
+   char *buff = NULL, *command; *argsC[arg_max];
    int size;
 
    size = getline(&buff, &n, stdin);
