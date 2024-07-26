@@ -9,7 +9,7 @@ Return: return 0 on success
 int exeCmd(char *argsC[])
 {
     pid_t pid;
-    int exe;
+    int exe, status;
 
     pid = fork();
 
@@ -26,7 +26,7 @@ int exeCmd(char *argsC[])
         }
     }
     else
-        wait();
+        wait(&status);
     
     return (0);
 }

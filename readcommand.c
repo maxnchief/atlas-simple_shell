@@ -34,6 +34,8 @@ int readCommand(void)
    argcount = tokenize(command, argsC);
    /**above stores a new command without a newline */
 
+   exeCmd
+   
    free(buff);
     return (size);
    
