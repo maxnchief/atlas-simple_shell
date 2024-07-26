@@ -12,7 +12,7 @@ int readCommand(void)
 {
    size_t n = 0;
    char *buff = NULL, *command; *argsC[arg_max];
-   int size;
+   int size, argcsount;
 
    size = getline(&buff, &n, stdin);
    if (size == -1)
@@ -31,8 +31,7 @@ int readCommand(void)
    }
 
    command = removeNC(buff, size);
-   tokenize(command, argsC);
-   printf("%s",command);
+   argcount = tokenize(command, argsC);
    /**above stores a new command without a newline */
 
    free(buff);

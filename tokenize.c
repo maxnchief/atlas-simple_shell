@@ -21,5 +21,7 @@
         token = strtok(NULL, delim);
     }
 
+    argsC[count] = NULL;
+
     return (count);
  }
