@@ -20,5 +20,7 @@ char *removeNC(char *str, int len)
 int tokenize(char *command, char *argsC[])
 int exeCmd(char *argsC[])
 char **parse_line(char *line)
+int execute(char **args)
+
 
 #endif
