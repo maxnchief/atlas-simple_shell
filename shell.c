@@ -5,14 +5,14 @@ main - entry point
 Return: return 0 on sucsess
  */
 
- int main(void)
+ int main(int argc, char **argv, char **env)
 
  {
     /*Loop to continue displaying a prompt */
     while(1)
     {
-        scanCommand();
-
+        scanCommand(argv, env);
+        /*function recievs user input from stdin before tokenization*/
     }
     return (0);
 }

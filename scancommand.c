@@ -8,7 +8,7 @@ readCommand - Function to take users input
  Return: return number of characters read from the starndard input
  */
 
-int scanCommand(void)
+int scanCommand(char **argv, char **env)
 {
    size_t n = 0;
    char *buff = NULL, *command; *argsC[arg_max];
@@ -30,11 +30,10 @@ int scanCommand(void)
    /*the code above accounts for input errors, and allocates in event of failure*/
    }
 
-   command = removeNC(buff, size);
-   argcount = tokenize(command, argsC);
+   buff = removeNC(buff, size);
+   tokenize(buff, argsC);
    /**above stores a new command without a newline */
-
-   exeCmd
+   exeCmd(argsC, argv, env)
    
    free(buff);
     return (size);

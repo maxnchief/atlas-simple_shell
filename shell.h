@@ -20,6 +20,7 @@ char *removeNC(char *str, int len)
 int tokenize(char *command, char *argsC[])
 int exeCmd(char *argsC[])
 char *getPath(char **env)
+int main(int argc, char **argv, char **env)
 
 
 #endif
