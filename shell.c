@@ -11,7 +11,7 @@ Return: return 0 on sucsess
     /*Loop to continue displaying a prompt */
     while(1)
     {
-        readCommand();
+        scanCommand();
 
     }
     return (0);

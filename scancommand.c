@@ -8,7 +8,7 @@ readCommand - Function to take users input
  Return: return number of characters read from the starndard input
  */
 
-int readCommand(void)
+int scanCommand(void)
 {
    size_t n = 0;
    char *buff = NULL, *command; *argsC[arg_max];
