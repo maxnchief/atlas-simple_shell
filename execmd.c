@@ -12,10 +12,13 @@ int exeCmd(char *argsC[])
     int exe, status;
 
     pid = fork();
+    char *path = getPath(env);
+    printf("%s", path);
 
     if (pid == -1)
     {
         perror("failed to create process");
+        exit(EXIT_FAILURE);
     }
     else if (pid == 0)
     {

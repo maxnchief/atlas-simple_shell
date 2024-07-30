@@ -15,7 +15,7 @@
 #define MAX_ARG 125
 
 int main(void)
-int scanCommand(void)
+int scanCommand(char **argv, char **env)
 char *removeNC(char *str, int len)
 int tokenize(char *command, char *argsC[])
 int exeCmd(char *argsC[])
