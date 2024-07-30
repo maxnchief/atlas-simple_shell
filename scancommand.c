@@ -1,7 +1,11 @@
 #include "shell.h"
-#include <stdlib.h>
-#include <stdio.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 /**
 readCommand - Function to take users input
  
@@ -11,7 +15,7 @@ readCommand - Function to take users input
 int scanCommand(char **argv, char **env)
 {
    size_t n = 0;
-   char *buff = NULL, *command; *argsC[arg_max];
+   char *buff = NULL, *command;
    int size, argcsount;
 
    size = getline(&buff, &n, stdin);
@@ -31,9 +35,9 @@ int scanCommand(char **argv, char **env)
    }
 
    buff = removeNC(buff, size);
-   tokenize(buff, argsC);
+   tokenize(buff);
    /**above stores a new command without a newline */
-   exeCmd(argsC, argv, env)
+   exeCmd(argv, env);
    
    free(buff);
     return (size);

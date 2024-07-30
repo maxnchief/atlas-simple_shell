@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stddef.h>
 
 /**
 getPath - function to help get path from the enviroment
@@ -19,12 +20,12 @@ char *getPath(char **env)
     int i = 0;
     char *pathKey, *pathValue, *path; 
     
-    while (env{i} != NULL)
+    while (env[i] != NULL)
     {
         pathKey = strtok(env[i], delim);
         pathValue = strtok(NULL, delim);
 
-        if (pathKey != NULL && pathValue != NULL && _strcmp(pathKey, *PATH*) ==  0)
+        if (pathKey != NULL && pathValue != NULL && strcmp(pathKey, *path) ==  0)
         {
             path = pathValue;
             return (path);

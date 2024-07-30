@@ -1,4 +1,10 @@
 #include "shell.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 /**
 main - entry point
@@ -25,12 +31,12 @@ Return: return 0 on sucsess
  */
 char **parse_line(char *line)
 {
-        int bufsize = BUFFER_SIZE, position = 0;
+        int bufsize = 0;
         char **tokens = malloc(bufsize * sizeof(char *));
         char *token;
 
         if (!tokens)
         {
                 fprintf(stderr, "allocation error\n");
-                exit(EXIT_FAILURE);
         }
+}
